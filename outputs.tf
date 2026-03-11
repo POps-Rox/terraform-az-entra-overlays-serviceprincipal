@@ -13,12 +13,12 @@ output "service_principal_object_id" {
 
 output "service_principal_application_id" {
   description = "The object id of service principal. Can be used to assign roles to user."
-  value       = azuread_service_principal.sp.application_id
+  value       = azuread_service_principal.sp.client_id
 }
 
 output "client_id" {
   description = "The application id of AzureAD application created."
-  value       = azuread_application.app.application_id
+  value       = azuread_application.app.client_id
 }
 
 output "client_secret" {
@@ -40,5 +40,5 @@ output "time_rotation" {
 
 output "application_object_id" {
   description = "The Application Object ID"
-  value       = azuread_application.app.object_id
+  value       = azuread_application.app.id
 }

@@ -26,7 +26,7 @@ resource "azuread_application" "app" {
 }
 
 resource "azuread_service_principal" "sp" {
-  application_id    = azuread_application.app.application_id
+  client_id         = azuread_application.app.client_id
   owners            = [data.azuread_client_config.current.object_id]
   alternative_names = var.alternative_names
   description       = var.service_principal_description
