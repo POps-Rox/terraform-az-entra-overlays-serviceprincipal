@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tf-az-entra-overlays-serviceprincipal
+  description: Terraform overlay for Azure Entra ID (AAD) service principals
+  annotations:
+    github.com/project-slug: POps-Rox/tf-az-entra-overlays-serviceprincipal
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - terraform
+    - terraform-module
+    - azure
+    - entra-id
+    - platform-ops
+  links:
+    - url: https://github.com/POps-Rox/tf-az-entra-overlays-serviceprincipal
+      title: GitHub Repository
+      icon: github
+spec:
+  type: terraform-module
+  owner: platform-ops-team
+  lifecycle: production
+  system: pops-rox-platform
