@@ -4,7 +4,7 @@ module "mod_service_principal" {
   #source  = "azurenoops/overlays-service-principal/azuread"
   #version = "x.x.x"
 
-  service_principal_name     = "dev-app-sp"
+  service_principal_name                       = "dev-app-sp"
   service_principal_password_rotation_in_years = 1
 
   # Adding roles and scope to service principal

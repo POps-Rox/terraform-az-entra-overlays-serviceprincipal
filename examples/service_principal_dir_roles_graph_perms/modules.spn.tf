@@ -3,13 +3,13 @@
 #
 
 module "mod_service_principal" {
-    source  = "../.."
+  source = "../.."
 
-    service_principal_name = "mod_service_principal"
-    service_principal_description = "Service Principal Example"
+  service_principal_name        = "mod_service_principal"
+  service_principal_description = "Service Principal Example"
 
-    enable_service_principal_certificate = false
-    service_principal_password_rotation_in_years = 1
+  enable_service_principal_certificate         = false
+  service_principal_password_rotation_in_years = 1
 
   # Adding roles and scope to service principal
   service_principal_assignments = [
@@ -25,12 +25,12 @@ module "mod_service_principal" {
   # Adding Delegated Permission Grants
   service_principal_graph_permissions = [
     {
-        id = "openid"
-        type = "Scope"
+      id   = "openid"
+      type = "Scope"
     },
     {
-        id = "User.Read"
-        type = "Scope"
+      id   = "User.Read"
+      type = "Scope"
     },
   ]
 

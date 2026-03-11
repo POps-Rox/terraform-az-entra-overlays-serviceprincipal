@@ -94,21 +94,21 @@ variable "service_principal_assignments" {
 
 variable "has_graph_perms" {
   description = "Triggers required_resource_access block in the app registration"
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "service_principal_graph_permissions" {
   description = "The list of MSGraph assignments to this service Principal"
   type = list(object({
-    id = string
+    id   = string
     type = string
   }))
-  default =  []
+  default = []
 }
 
 variable "service_principal_directory_roles" {
   description = "The list of Directory Roles to Give to the SPN"
-  type = list(string)
-  default =  []
+  type        = list(string)
+  default     = []
 }

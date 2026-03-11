@@ -35,10 +35,10 @@ output "service_principal_password" {
 
 output "time_rotation" {
   description = "Timestamp for certificate and password rotation"
-  value = time_rotating.main.rotation_rfc3339
+  value       = time_rotating.main.rotation_rfc3339
 }
 
 output "application_object_id" {
   description = "The Application Object ID"
-  value = azuread_application.app.object_id
+  value       = azuread_application.app.object_id
 }
