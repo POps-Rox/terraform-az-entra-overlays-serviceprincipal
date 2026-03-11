@@ -1,0 +1,18 @@
+site_name: "Entra Service Principal Overlay"
+site_description: Documentation for Entra Service Principal Overlay
+repo_url: https://github.com/POps-Rox/tf-az-entra-overlays-serviceprincipal
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
