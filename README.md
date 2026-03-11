@@ -22,7 +22,7 @@ provider "azurerm" {
   features {}
 }
 module "mod_service_principal" {
-  source  = "azurenoops/overlays-service-principal/azuread"
+  source  = "POps-Rox/tf-az-overlays-service-principal/azuread"
   version = "x.x.x"
   service_principal_name     = "dev-app-sp"
   service_principal_password_rotation_in_years = 1
@@ -51,7 +51,7 @@ provider "azurerm" {
   features {}
 }
 module "mod_service_principal" {
-  source  = "azurenoops/overlays-service-principal/azuread"
+  source  = "POps-Rox/tf-az-overlays-service-principal/azuread"
   version = "x.x.x"
   service_principal_name               = "dev-app-sp"
   enable_service_principal_certificate = true
@@ -98,7 +98,7 @@ You can set the scope at the level of the subscription, resource group, or resou
 
 ```hcl
 module "mod_service_principal" {
-  source  = "azurenoops/overlays-service-principal/azuread"
+  source  = "POps-Rox/tf-az-overlays-service-principal/azuread"
   version = "x.x.x"
   
   # .... omitted
