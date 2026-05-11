@@ -1,7 +1,7 @@
 
 module "mod_service_principal" {
   source = "../../"
-  #source  = "github.com/POps-Rox/tf-az-entra-overlays-serviceprincipal"
+  #source  = "github.com/POps-Rox/terraform-az-entra-overlays-serviceprincipal"
   #version = "x.x.x"
 
   service_principal_name                       = "dev-app-sp"
