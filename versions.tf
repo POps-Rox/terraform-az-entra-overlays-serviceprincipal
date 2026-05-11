@@ -2,14 +2,23 @@
 # Licensed under the MIT License.
 
 terraform {
+  required_version = ">= 1.10"
   required_providers {
     azuread = {
       source  = "hashicorp/azuread"
-      version = ">= 2.30.0"
+      version = "~> 3.0"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.116"
+      version = "~> 4.20"
+    }
+    azapi = {
+      source  = "azure/azapi"
+      version = "~> 2.0"
+    }
+    popsrox = {
+      source  = "POps-Rox/azutils"
+      version = "~> 1.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -20,5 +29,4 @@ terraform {
       version = ">= 0.7.1"
     }
   }
-  required_version = ">= 1.9"
 }

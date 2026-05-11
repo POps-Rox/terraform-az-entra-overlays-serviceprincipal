@@ -1,6 +1,22 @@
 # Changelog
 
-## [Unreleased](https://github.com/Azure/terraform-verified-module/tree/HEAD)
+## [Unreleased](https://github.com/POps-Rox/terraform-az-entra-overlays-serviceprincipal/tree/HEAD)
+
+## [v2.0.0] - 2026-05-11
+
+### Changed
+
+- **BREAKING**: Bumped `azurerm` provider to `~> 4.20` (was `~> 3.116`).
+- **BREAKING**: Bumped `azuread` provider to `~> 3.0` (was `>= 2.30.0`).
+- **BREAKING**: Bumped Terraform `required_version` to `>= 1.10` (was `>= 1.9`).
+- Added `azapi ~> 2.0` and `popsrox POps-Rox/azutils ~> 1.0` to root `required_providers` for fleet alignment.
+- Added `principal_type = "ServicePrincipal"` to `azurerm_role_assignment.role` to avoid the eventual-consistency Graph lookup that azurerm 4.x performs when `principal_type` is unset.
+- Examples: refreshed both `examples/*/versions.tf` to declare the full fleet provider stack (azuread, azurerm, azapi, popsrox).
+
+### Migration notes
+
+- Consumers must set `ARM_SUBSCRIPTION_ID` (or `provider "azurerm" { subscription_id = ... }`) — azurerm 4.x makes this mandatory.
+- The module module surface is small: a single `azurerm_role_assignment` plus `azuread_*` resources. No 3.x→4.x attribute renames applied to this module resources.
 
 **Merged pull requests:**
 
