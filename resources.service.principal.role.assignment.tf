@@ -8,4 +8,5 @@ resource "azurerm_role_assignment" "role" {
   scope                = var.service_principal_assignments[count.index].scope
   role_definition_name = var.service_principal_assignments[count.index].role_definition_name
   principal_id         = azuread_service_principal.sp.object_id
+  principal_type       = "ServicePrincipal"
 }
